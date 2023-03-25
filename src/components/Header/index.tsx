@@ -62,7 +62,7 @@ const Items = () => {
   ]
 
   return (
-    <div className="flex flex-col items-center gap-4 text-white">
+    <div className="flex flex-col items-center gap-4 text-white md:flex-row">
       {items.map((item) => (
         <div>{item.name}</div>
       ))}

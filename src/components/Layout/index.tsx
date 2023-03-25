@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import { Footer } from '../Footer'
 import { Header } from '../Header'
 
 interface Props {
@@ -10,7 +11,7 @@ export const Layout = ({ children }: Props): ReactElement => {
     <div className={``}>
       <Header />
       <main>{children}</main>
-      <footer>footer</footer>
+      <Footer />
     </div>
   )
 }
