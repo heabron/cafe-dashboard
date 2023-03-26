@@ -9,13 +9,13 @@ export const Header = (): ReactElement => {
   const onlyWidth = useWindowWidth()
 
   return (
-    <div className={`flex justify-between bg-black px-4 py-3`}>
+    <div className={`flex justify-between px-4 py-3`}>
       {onlyWidth >= 768 ? (
         <Items />
       ) : (
         <div>
           <Dialog.Root open={isMenuOpen}>
-            <Dialog.Trigger className='z-50'>
+            <Dialog.Trigger className="z-50">
               {isMenuOpen ? (
                 <HiX
                   className="relative z-50 h-6 w-6 text-white"
@@ -33,7 +33,7 @@ export const Header = (): ReactElement => {
                 onClick={() => setIsMenuOpen(false)}
                 className="fixed inset-0 bg-black bg-opacity-50"
               />
-              <Dialog.Content className="fixed left-0 py-20 top-12 z-10 h-screen w-1/2 bg-black">
+              <Dialog.Content className="fixed left-0 top-12 z-10 h-screen w-1/2 bg-black py-20">
                 <Items />
               </Dialog.Content>
             </Dialog.Portal>
@@ -61,10 +61,25 @@ const Items = () => {
     },
   ]
 
+  const scrollToSection = (section: string) => {
+    const sectionElement = document.getElementById(section)
+    if (sectionElement) {
+      sectionElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+  }
+
   return (
     <div className="flex flex-col items-center gap-4 text-white md:flex-row">
       {items.map((item) => (
-        <div>{item.name}</div>
+        <div
+          className="cursor-pointer select-none"
+          onClick={() => scrollToSection(item.name)}
+        >
+          {item.name}
+        </div>
       ))}
     </div>
   )

@@ -6,7 +6,7 @@ import { FaStar } from 'react-icons/fa'
 export const Footer = (): ReactElement => {
   const links = ['Home', 'Gallery', 'Services', 'About', 'Customers', 'Contact']
 
-  const scrollToSection = (link: string) => {
+  const scrollToSection = (link: string): void => {
     const section = document.getElementById(link)
     if (section) {
       section.scrollIntoView({
