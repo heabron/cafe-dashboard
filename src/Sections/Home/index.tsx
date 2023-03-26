@@ -25,7 +25,7 @@ export const Home = (): ReactElement => {
   ]
 
   const ScrollToAbout = () => {
-    const section = document.getElementById('about')
+    const section = document.getElementById('About')
     if (section) {
       section.scrollIntoView({
         behavior: 'smooth',

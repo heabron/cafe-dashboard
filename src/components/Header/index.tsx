@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { Dispatch, ReactElement, SetStateAction } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 
 import { HiOutlineMenu, HiSearch, HiX } from 'react-icons/hi'
@@ -11,19 +11,19 @@ export const Header = (): ReactElement => {
   return (
     <div className={`flex justify-between px-4 py-3`}>
       {onlyWidth >= 768 ? (
-        <Items />
+        <Items isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       ) : (
         <div>
           <Dialog.Root open={isMenuOpen}>
-            <Dialog.Trigger className="z-50">
+            <Dialog.Trigger className="z-10">
               {isMenuOpen ? (
                 <HiX
-                  className="relative z-50 h-6 w-6 text-white"
+                  className="relative z-10 h-6 w-6 text-white"
                   onClick={() => setIsMenuOpen(false)}
                 />
               ) : (
                 <HiOutlineMenu
-                  className="relative z-50 h-6 w-6 text-white"
+                  className="relative z-10 h-6 w-6 text-white"
                   onClick={() => setIsMenuOpen(true)}
                 />
               )}
@@ -33,8 +33,8 @@ export const Header = (): ReactElement => {
                 onClick={() => setIsMenuOpen(false)}
                 className="fixed inset-0 bg-black bg-opacity-50"
               />
-              <Dialog.Content className="fixed left-0 top-12 z-10 h-screen w-1/2 bg-black py-20">
-                <Items />
+              <Dialog.Content className="fixed left-0 top-0 z-10 h-screen w-1/2 bg-black py-20">
+                <Items isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
               </Dialog.Content>
             </Dialog.Portal>
           </Dialog.Root>
@@ -45,7 +45,12 @@ export const Header = (): ReactElement => {
   )
 }
 
-const Items = () => {
+interface ItemProps {
+  isMenuOpen: boolean
+  setIsMenuOpen: Dispatch<SetStateAction<boolean>>
+}
+
+const Items = ({ isMenuOpen, setIsMenuOpen }: ItemProps) => {
   const items = [
     {
       name: 'About',
@@ -63,12 +68,16 @@ const Items = () => {
 
   const scrollToSection = (section: string) => {
     const sectionElement = document.getElementById(section)
-    if (sectionElement) {
-      sectionElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
-    }
+
+    sectionElement?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    })
+  }
+
+  const onHandleClick = async (section: string) => {
+    setIsMenuOpen(false)
+    scrollToSection(section)
   }
 
   return (
@@ -76,7 +85,7 @@ const Items = () => {
       {items.map((item) => (
         <div
           className="cursor-pointer select-none"
-          onClick={() => scrollToSection(item.name)}
+          onClick={() => onHandleClick(item.name)}
         >
           {item.name}
         </div>
