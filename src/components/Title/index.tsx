@@ -9,7 +9,7 @@ export const Title = ({ children, textBg }: TitleProps): ReactElement => {
   return (
     <div className={`relative`}>
       {children}
-      <span className="absolute inset-0 -z-10 font-black text-center text-8xl text-gray-100">
+      <span className="absolute top-1/2 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 text-center text-8xl font-black text-gray-100">
         {textBg}
       </span>
     </div>
