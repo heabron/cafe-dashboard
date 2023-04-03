@@ -33,6 +33,10 @@ module.exports = {
         honeydewGreen: '#F0F8EA',
         nyanza: '#DAF7DC',
       },
+      backgroundImage: {
+        coffee: "url('../assets/images/coffeeAbout.jpeg')",
+        interior: "url('../assets/images/InteriorAbout.jpeg')",
+      },
     },
   },
   plugins: [],
