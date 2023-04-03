@@ -35,7 +35,7 @@ module.exports = {
       },
       backgroundImage: {
         coffee: "url('../assets/images/coffeeAbout.jpeg')",
-        interior: "url('../assets/images/interiorAbout.jpeg')",
+        interior: "url('../assets/images/InteriorAbout.jpeg')",
       },
     },
   },
