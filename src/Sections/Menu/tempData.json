@@ -1,0 +1,312 @@
+{
+  "Data": [
+    {
+      "name": "coffee",
+      "products": [
+        {
+          "name": "Americano",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Mocca",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Expresso",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Mocca",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Latte",
+          "price": 6.5,
+          "quantity": 200,
+          "gran": "ml"
+        },
+        {
+          "name": "Mocca",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Caramel Latte",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Cappuccino",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Cappuccino",
+          "price": 6.5,
+          "quantity": 200,
+          "gran": "ml"
+        },
+        {
+          "name": "Flat-white",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Chai Latte",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        },
+        {
+          "name": "Mocca",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "ml"
+        }
+      ]
+    },
+    {
+      "name": "cookie",
+      "products": [
+        {
+          "name": "Chocolate Chip",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Oatmeal Raisin",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Peanut Butter",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Sugar",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chocolate Chip",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Oatmeal Raisin",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Peanut Butter",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Sugar",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chocolate Chip",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Oatmeal Raisin",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Peanut Butter",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Sugar",
+          "price": 2.5,
+          "quantity": 40,
+          "gran": "pcs"
+        }
+      ]
+    },
+    {
+      "name": "breakfast",
+      "products": [
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Egg Sandwich",
+          "price": 4.5,
+          "quantity": 40,
+          "gran": "pcs"
+        }
+      ]
+    },
+    {
+      "name": "lunch",
+      "products": [
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        },
+        {
+          "name": "Chicken Sandwich",
+          "price": 6.5,
+          "quantity": 40,
+          "gran": "pcs"
+        }
+      ]
+    }
+  ]
+}

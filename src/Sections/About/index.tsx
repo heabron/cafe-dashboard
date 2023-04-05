@@ -1,5 +1,6 @@
 import { AboutCard } from '@/components/AboutCard'
 import { SectionName } from '@/components/SectionName'
+import { SubText } from '@/components/SubText'
 import { Title } from '@/components/Title'
 import React, { ReactElement } from 'react'
 
@@ -19,13 +20,13 @@ export const About = (): ReactElement => {
       <SectionName>COFFEE</SectionName>
       <div className="flex flex-col items-center">
         <Title textBg="COFFEE">
-          <div className="w-screen py-10 px-4 text-center text-xl font-bold text-slate-600">
+          <div className="w-screen py-10 px-4 z-20 text-center text-xl font-bold text-slate-600">
             Find Peace & Harmony with your
           </div>
         </Title>
-        <span className="px-4 text-center text-sm font-semibold text-slate-600 md:max-w-4xl">
+        <SubText>
           {text}
-        </span>
+        </SubText>
         <Title textBg="TASTE">
           <AboutCard
             text={'From 5$'}

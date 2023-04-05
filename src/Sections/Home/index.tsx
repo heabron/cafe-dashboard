@@ -36,6 +36,7 @@ export const Home = (): ReactElement => {
 
   return (
     <div
+    id='Home'
       className={`flex h-[90vh] flex-col items-center justify-between px-4 pt-10 text-center text-white`}
     >
       <Image
@@ -43,14 +44,14 @@ export const Home = (): ReactElement => {
         alt={'Home Image'}
         width={1920}
         height={1080}
-        className="absolute top-0 left-0 -z-10 h-screen w-screen brightness-[0.5]"
+        className="absolute top-0 left-0 h-screen w-screen brightness-[0.5]"
       />
-      <span className="w-fit rounded-full bg-blue-500 p-2">COFFEE</span>
-      <div className="text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+      <span className="z-20 w-fit rounded-full bg-blue-500 p-2">COFFEE</span>
+      <div className="z-20 text-xl md:text-2xl lg:text-3xl xl:text-4xl">
         <p>Delicious Coffee & Cozy Interior</p>
         <p>in DownTown Chicago</p>
       </div>
-      <div className="flex flex-col items-center gap-4 md:flex-row md:gap-10">
+      <div className="z-20 flex flex-col items-center gap-4 md:flex-row md:gap-10">
         {/* <HomeData /> */}
         {itens.map((item, index) => (
           <HomeData
@@ -62,7 +63,7 @@ export const Home = (): ReactElement => {
       </div>
       <button
         onClick={ScrollToAbout}
-        className="z-10 rounded-full bg-white p-4 font-bold text-black shadow-md transition-all duration-500 hover:bg-gray-200 hover:shadow-lg"
+        className="z-20 lg:mb-10 rounded-full bg-white p-4 font-bold text-black shadow-md transition-all duration-500 hover:bg-gray-200 hover:shadow-lg"
       >
         Show More
       </button>

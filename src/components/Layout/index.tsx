@@ -8,7 +8,7 @@ interface Props {
 
 export const Layout = ({ children }: Props): ReactElement => {
   return (
-    <div className={`max-w-screen overflow-x-hidden`}>
+    <div className={`max-w-screen overflow-x-hidden bg-white`}>
       <Header />
       <main>{children}</main>
       <Footer />

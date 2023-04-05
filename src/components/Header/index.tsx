@@ -31,9 +31,9 @@ export const Header = (): ReactElement => {
             <Dialog.Portal>
               <Dialog.Overlay
                 onClick={() => setIsMenuOpen(false)}
-                className="fixed inset-0 bg-black bg-opacity-50"
+                className="fixed inset-0 z-20 bg-black bg-opacity-70"
               />
-              <Dialog.Content className="fixed left-0 top-0 z-10 h-screen w-1/2 bg-black py-20">
+              <Dialog.Content className="fixed left-0 top-0 z-20 h-screen w-1/2 bg-black py-20">
                 <Items isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
               </Dialog.Content>
             </Dialog.Portal>
@@ -56,7 +56,7 @@ const Items = ({ isMenuOpen, setIsMenuOpen }: ItemProps) => {
       name: 'About',
     },
     {
-      name: 'Services',
+      name: 'Menu',
     },
     {
       name: 'Reviews',
@@ -71,17 +71,19 @@ const Items = ({ isMenuOpen, setIsMenuOpen }: ItemProps) => {
 
     sectionElement?.scrollIntoView({
       behavior: 'smooth',
-      block: 'center',
     })
   }
 
   const onHandleClick = async (section: string) => {
     setIsMenuOpen(false)
-    scrollToSection(section)
+
+    setTimeout(() => {
+      scrollToSection(section)
+    }, 1)
   }
 
   return (
-    <div className="flex flex-col items-center gap-4 text-white md:flex-row">
+    <div className="z-10 flex flex-col items-center gap-4 text-white md:flex-row">
       {items.map((item) => (
         <div
           className="cursor-pointer select-none"
