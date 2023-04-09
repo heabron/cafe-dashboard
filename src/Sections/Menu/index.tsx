@@ -116,7 +116,7 @@ export const Menu = (): ReactElement => {
       setTimeout(() => {
         setIsLoading(false)
       }, 700)
-    }, 1)
+    }, 10)
   }
 
   return (
