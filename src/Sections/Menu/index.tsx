@@ -109,12 +109,14 @@ export const Menu = (): ReactElement => {
 
   const onHandleClick = (tab: string) => {
     if (tab === activeTab) return
-
     setIsLoading(true)
-    setActiveTab(tab)
+
     setTimeout(() => {
-      setIsLoading(false)
-    }, 700)
+      setActiveTab(tab)
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 700)
+    }, 1)
   }
 
   return (
