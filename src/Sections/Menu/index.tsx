@@ -115,8 +115,8 @@ export const Menu = (): ReactElement => {
       setActiveTab(tab)
       setTimeout(() => {
         setIsLoading(false)
-      }, 700)
-    }, 10)
+      }, 600)
+    }, 100)
   }
 
   return (
