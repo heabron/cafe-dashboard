@@ -13,6 +13,7 @@ import { GiFoodChain } from 'react-icons/gi'
 
 import { Data as DATA } from './tempData.json'
 import { useWindowWidth } from '@react-hook/window-size'
+import { FadingDots } from 'react-cssfx-loading'
 
 interface HeaderMenuItemProps extends React.HTMLAttributes<HTMLDivElement> {
   Icon: IconType
@@ -78,7 +79,7 @@ const ItemData = ({
           : `${index === 0 ? '' : 'border-t-2 border-gray-200'}`
       }`}
     >
-      <div className="flex gap-2">
+      <div className={'flex gap-2'}>
         <span>{name}</span>
         <span className="self-end text-sm text-gray-500">
           {quantity} {gran}
@@ -93,6 +94,8 @@ export const Menu = (): ReactElement => {
   const [activeTab, setActiveTab] = React.useState<
     'coffee' | 'cookie' | 'breakfast' | 'lunch' | string
   >('coffee')
+  const [isLoading, setIsLoading] = React.useState<boolean>(false)
+  const [change, setChange] = React.useState<boolean>(false)
 
   const text =
     'Cafe is a casual upscale cafe, serving breakfast all day! Enjoy our signature croissant French toast, waffles, or a scramble anytime. Full lunch menu also available, with wraps, burgers, and salad options. Thirsty? Cool down (or warm up) with tra, coffee, fresh smoothies and juices, or beer and wine - all in the perfect family-friendly environment'
@@ -103,6 +106,16 @@ export const Menu = (): ReactElement => {
     { name: 'Breakfast', Icon: MdFreeBreakfast, value: 'breakfast' },
     { name: 'Lunch', Icon: GiFoodChain, value: 'lunch' },
   ]
+
+  const onHandleClick = (tab: string) => {
+    if (tab === activeTab) return
+
+    setIsLoading(true)
+    setActiveTab(tab)
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 700)
+  }
 
   return (
     <div id="Menu" className={`flex flex-col items-center gap-10`}>
@@ -127,7 +140,7 @@ export const Menu = (): ReactElement => {
                 value={tab.value}
               >
                 <HeaderMenuItem
-                  onClick={() => setActiveTab(tab.value)}
+                  onClick={() => onHandleClick(tab.value)}
                   Icon={tab.Icon}
                   text={tab.name}
                   active={activeTab === tab.value}
@@ -135,26 +148,33 @@ export const Menu = (): ReactElement => {
               </Tabs.Trigger>
             ))}
           </Tabs.List>
-
-          {DATA.map((item, index) => {
-            return (
-              <Tabs.Content
-                key={index}
-                value={item.name}
-                className="max-h-72 w-full overflow-y-scroll px-10 py-5 lg:overflow-auto"
-              >
-                <div
-                  className={
-                    'grid w-full grid-cols-1 lg:grid-cols-3 lg:gap-x-4'
-                  }
-                >
-                  {item.products.map((item, index) => {
-                    return <ItemData index={index} {...item} key={index} />
-                  })}
-                </div>
-              </Tabs.Content>
-            )
-          })}
+          {isLoading ? (
+            <div className="flex h-72 w-full items-center justify-center lg:h-52">
+              <FadingDots color="#cccccc" width={75} height={75} />
+            </div>
+          ) : (
+            <div className="w-full">
+              {DATA.map((item, index) => {
+                return (
+                  <Tabs.Content
+                    key={index}
+                    value={item.name}
+                    className="max-h-72 w-full overflow-y-scroll px-10 py-5 lg:overflow-auto"
+                  >
+                    <div
+                      className={
+                        'grid w-full grid-cols-1 lg:grid-cols-3 lg:gap-x-4'
+                      }
+                    >
+                      {item.products.map((item, index) => {
+                        return <ItemData index={index} {...item} key={index} />
+                      })}
+                    </div>
+                  </Tabs.Content>
+                )
+              })}
+            </div>
+          )}
         </Tabs.Root>
       </div>
     </div>
