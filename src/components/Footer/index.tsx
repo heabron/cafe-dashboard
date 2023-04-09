@@ -4,7 +4,7 @@ import { Rating } from '@mui/material'
 import { FaStar } from 'react-icons/fa'
 
 export const Footer = (): ReactElement => {
-  const links = ['Home', 'Gallery', 'Services', 'About', 'Customers', 'Contact']
+  const links = ['Home', 'Gallery', 'Menu', 'About', 'Customers', 'Contact']
 
   const scrollToSection = (link: string): void => {
     const section = document.getElementById(link)

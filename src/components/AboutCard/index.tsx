@@ -3,6 +3,7 @@ import { SectionName } from '../SectionName'
 import { BsArrowRightShort } from 'react-icons/bs'
 
 import { BsPlayFill } from 'react-icons/bs'
+import { BoldText } from '../BoldText'
 
 interface AboutCardProps {
   text: string
@@ -25,7 +26,7 @@ export const AboutCard = ({
 }: AboutCardProps): ReactElement => {
   return (
     <div
-      className={`grid grid-cols-1 gap-4 p-4 md:grid-cols-2 md:place-items-center md:gap-20`}
+      className={`grid grid-cols-1 gap-4 p-4 z-20 md:grid-cols-2 md:place-items-center md:gap-20`}
     >
       <div
         className={`${bg} flex h-52 flex-col justify-between rounded-xl bg-cover p-10 md:justify-self-end ${
@@ -44,12 +45,14 @@ export const AboutCard = ({
       </div>
       <div className="flex flex-col items-center gap-10 md:w-full md:items-start md:py-10">
         <SectionName>{name}</SectionName>
-        <span className="text-center text-xl font-bold text-slate-600">
-          {title1} <br /> {title2}
-        </span>
+        <BoldText>
+          <div>
+            {title1} <br /> {title2}
+          </div>
+        </BoldText>
         <div
           onClick={onClick}
-          className="flex cursor-pointer gap-10 rounded-full p-2 text-sm font-bold text-slate-600 transition-all duration-500 hover:gap-20 hover:bg-gray-100"
+          className="flex cursor-pointer items-center gap-10 rounded-full p-2 text-sm font-bold text-slate-600 transition-all duration-500 hover:gap-20 hover:bg-gray-100"
         >
           {text} <BsArrowRightShort className="text-2xl" />
         </div>
